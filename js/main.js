@@ -83,7 +83,7 @@ $(function () {
       { src: "img/chinami.jpg" },
       { src: "img/bar.jpg" },
       { src: "img/xmas.jpg" },
-      { src: "img/art.JPG" },
+      { src: "img/art.jpg" },
       { src: "img/staff-last.jpg" },
       { src: "img/DSC_0060.jpg" },
       { src: "img/outdoor.jpg" },
