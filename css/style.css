@@ -1,0 +1,1250 @@
+@charset "UTF-8";
+
+/*-----------------共通部分-----------------------*/
+
+
+
+
+html {
+  font-size: 16px;
+  color: #ffffff;
+  
+
+}
+body {
+
+font-family: 'Cinzel',serif;
+background-color:  #1a0404;
+
+}
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+img {
+  max-width: 100%;
+}
+li {
+  list-style:none;
+}
+/* --------------------------------------loading---------------------------------------------------- */
+#loading {
+  width: 100vw;
+  height: 100vh;
+  transition: all 1s;
+  background-color:black;position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  opacity: 0.9;
+  
+  
+
+}
+.spinner {
+  width: 20px;
+  height: 20px;
+  margin: 0 auto 0;
+  background-color: #fff;
+  border-radius: 100%;
+  animation: sk-scaleout 1.0s 1 linear;
+  animation-fill-mode: forwards;
+}
+/* ローディングアニメーション */
+@keyframes sk-scaleout {
+  0% {
+    transform: translateX(-50px);
+  } 100% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+}
+
+.loaded {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#loading img {
+  
+  display: block;
+  margin:250px auto 20px;
+}
+ 
+/* ---------------------------------------------------------header--------------------------------------------- */
+header {
+   padding :1% 3% 40% 3%;
+  background-image: url("../img/tennai3.jpg");
+   background-size:cover;
+   background-position: center center; 
+   width: 100%;    
+   display: flex;
+   justify-content: space-between; 
+}
+
+header img {
+  width: 100%;
+  max-width: 250px;
+  min-width: 100px;
+  height:136px;
+}
+
+.navi-menu li {
+  font-size: 1.55rem;
+  margin-right: 20px;
+}
+.navi-menu a:hover {
+  color: black;
+}
+.navi-menu a {
+  position: relative;
+  display: inline-block;
+}
+.navi-menu a::after {
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  content: '';
+  width: 100%;
+  height: 2px;
+  background:black;
+  transform: scale(0, 1);
+  transform-origin: center top;
+  transition: transform .3s;
+}
+
+.navi-menu a:hover::after {
+  transform: scale(1, 1);
+}
+
+/* ------------------------------------ページスクロール---------------------------- */
+
+.pagetop{
+    display: none;
+    position: fixed;
+    right: 5%;
+    bottom: 1%;
+}
+.pagetop a{
+    display: block;
+    font-size: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    background:rgba(32, 30, 30, 0.8);
+    border: 1px solid #fff;
+    line-height: 50px;
+}
+
+.pagetop a:hover {
+  opacity: 0.8;
+  transform: scale(1.2,1.2);
+  transition: 1s;
+}
+
+
+
+/* --------------------------------------------------------main----------------------------------------------- */
+h1 {
+  text-align: center;
+  margin-top: 80px;
+  font-weight:normal;
+  font-size: 2.5rem;
+}
+
+/* ----------------------------------------------------セクション１------------------------------------------- */
+.section1 {
+  padding: 2%;
+   position: relative;
+}
+.section1 p{
+  text-align: center;
+  line-height: 33px;
+  font-size: 1.1rem;
+ 
+}
+.section1 img {
+  max-width: 200px;
+  height: 280px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+
+/* -----------------------------------------------セクション２------------------------------------------------ */
+.section2 {
+padding: 2% 5% 2% 0;
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.fish-img{
+  border-radius: 8px;
+}
+
+
+.pizza-img {
+  margin-top: 200px;
+  max-width: 800px;
+  /* height: 00px; */
+  width: 100%;
+  border-radius: 5px;
+  
+}
+.tapas-img {
+max-width: 350px;
+position: absolute;
+top: 60px;
+left:400px;
+border-radius: 8px;
+}
+
+.txt-box {
+  text-align: center;
+  border :1px solid #ffffff;
+  height: 430px;
+  width: 330px;
+  padding: 40px 20px 40px 20px;
+  margin-top: 200px;
+}
+.boxtxt-l {
+  font-size: 2.4rem;
+  letter-spacing: 10px;
+}
+.boxtxt-m {
+  line-height: 30px;
+  margin-bottom: 40px;
+  
+}
+.boxtxt-s1 {
+  font-size: 0.9rem;
+  margin-bottom: 20px;  
+ position: relative;
+}
+.boxtxt-s2 {
+  font-size: 0.9rem;
+  margin-bottom: 20px;  
+} 
+ .boxtxt-s1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; 
+  display: inline-block;
+  width: 70px; 
+  height: 1px; 
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); 
+  background-color:#fff; 
+}
+.link-btn {
+  border: 1px solid #fff;
+  padding: 7px 12px;
+}
+.link-btn:hover {
+  background-color: #fff;
+  color: black;
+  transition: 1s;
+}
+/* -----------------------------------------------------------セクション３---------------------------------------------------------- */
+
+.picture {
+  text-align: center;
+  margin-top: 200px;
+  position: relative;
+}
+.course-img {
+  width: 900px;
+  max-height: 700px;
+  
+}
+.food-img {
+  width: 350px;
+  height: 250px;
+  position: absolute;
+  top: -80px;
+  left: 30px;
+  z-index: 1000;
+}
+.human-img {
+  width: 350px;
+  height: 250px;
+  position: absolute;
+  top: -190px;
+  right: 50px;
+}
+/* ----------------------------------------------------------セクション４ーーーーーーーーーーーーーーーーーーーーーーー------------------------- */
+.section4 {
+  background-image: url("../img/lemon３.jpg");
+  background-size:cover;
+  height: 700px;
+  margin-top: 50px;
+padding-top: 150px;
+
+}
+.txt-box2 {
+  text-align: center;
+  border :1px solid #ffffff;
+  height: 430px;
+  width: 330px;
+  padding: 30px 0 30px 0;
+  margin-left: 100px;
+}
+.boxtxt-l2 {
+  letter-spacing: 3px;
+  font-size: 2.3rem;
+}
+/* ------------------------------------------------------------------------セクション５----------------------------------------------------------------------- */
+.section5 {
+/* padding-right: 50px;
+padding-left: 50px; */
+/* padding-bottom: 50px; */
+text-align: center;
+}
+
+
+.section-txt {
+  margin-top: 30px;
+  font-size: 2.6rem;
+  letter-spacing: 5px;
+}
+.section-txts {
+  font-size: 0.98rem;
+  margin-bottom: 40px;
+  margin-top: 20px;
+}
+.section5-imgs {
+  /* display: grid;
+  grid-template-columns:50% 50% ; */
+  width: 100%;
+  padding-top: 50%;
+}
+/* -----------------------------------------------------------------------------セクション６-------------------------------------------------------------- */
+.section6 {
+  background-color: #120F0F;
+  text-align: center;
+  padding: 40px 80px 50px 80px;
+}
+.section-txt6 {
+  font-size: 2.6rem;
+  letter-spacing: 5px;
+}
+.newsbox {
+  width: 26%;
+  border-top:3px solid #fff;
+  border-bottom:3px solid #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+
+}
+.news-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+.news-txt6 {
+  margin-bottom: 20px;
+}
+.news-txt6s {
+  text-align: left;
+}
+.br-show {
+  display: none;
+}
+/* -------------------------------------------------------------------------セクション７------------------------------------------------------------ */
+.section7 {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  width: 900px;
+  padding-top: 50px;
+  
+}
+.section7 img {
+  width: 480px;
+  height: 600px;
+}
+.infomation-box {
+  background-color: #9A0000;
+  text-align: center;
+  padding: 110px 60px;
+  border:1px solid #fff ;
+}
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.section7-txt {
+  font-size: 0.9rem;
+  margin-bottom: 20px;  
+ position: relative;
+} 
+
+ .section7-txt::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; 
+  display: inline-block;
+  width: 100px; 
+  height: 1px; 
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); 
+  background-color:#fff; 
+}
+
+.section7-txtL1 {
+
+  margin-top: 50px;
+}
+/* -------------------------------------------------セクション８------------------------------------------------------------ */
+
+.section8 {
+  text-align: center;
+}
+
+.section8 h2 {
+  font-size: 3rem;
+  letter-spacing: 3px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+
+}
+.section8 p {
+  font-size: 1.4rem;
+  margin-bottom: 30px;
+}
+iframe{
+filter: grayscale(100%) invert(92%) contrast(90%);
+}
+.gmap {
+  width: 100%;
+}
+
+/* ----------------------------------------------------------------------フッター---------------------------------------------------------------- */
+footer {
+  width: 300px;
+  margin: 0 auto;
+}
+.footwrapper {
+  text-align: center;
+  font-family: serif;
+  margin-top: 100px;
+  padding-bottom: 50px;
+}
+.fab {
+  display: inline-block;
+  font-size: 1.8rem;
+  margin-top: 40px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.footwrapper p {
+  margin-bottom: 10px;
+}
+.footwrapper img {
+  width: 60%;
+  height: 60%;
+}
+.small {
+  text-decoration:underline;
+}
+
+
+/* -------------------------------------------------------------------アニメーション------------------------------------------------------------- */
+
+.section1 .fish-img {
+  opacity: 0;
+  transform:translateY(50px) ;
+  transition: 1s;
+}
+.section1.show .fish-img{
+  opacity: 1;
+  transform:none ;
+}
+.section2 .pizza-img {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: 1s;
+}
+.section2.show .pizza-img {
+  opacity: 1;
+  transform: none;
+}
+.section2 .tapas-img {
+  opacity: 0;
+  transform: translatey(50px);
+  transition: 1s;
+}
+.section2.show .tapas-img {
+  opacity: 1;
+  transform: none;
+}
+.section2 .txt-box {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 2s;
+}
+.section2.show .txt-box{
+  opacity: 1;
+  transform: none;
+}
+.section3 .picture .food-img {
+  opacity: 0;
+  transform: translateX(-70px); 
+  transition: 1s;
+}
+.section3.show .picture .food-img {
+  opacity: 1;
+  transform: none;
+}
+.section3 .picture .human-img {
+  opacity: 0;
+  transform: translateX(30px); 
+  transition: 1s;
+}
+.section3.show .picture .human-img {
+  opacity: 1;
+  transform: none;
+}
+.section3 .picture .course-img {
+  opacity: 0;
+  transform: translatey(60px); 
+  transition: 2s;
+}
+.section3.show .picture .course-img {
+  opacity: 1;
+  transform: none;
+}
+.section4 .txt-box2 {
+  opacity: 0;
+  transform: translateX(-90px);
+  transition: 2s;
+}
+.section4.show .txt-box2{
+  opacity: 1;
+  transform: none;
+}
+.section5 .section5-imgs {
+  opacity: 0;
+  transform: translateZ(-90px);
+  transition: 3s;
+}
+.section5.show .section5-imgs{
+  opacity: 1;
+  transform: none;
+}
+
+
+
+
+/* -----------------------------------------------------------------------hamburger-------------------------------------------------------------------------- */
+
+
+.sp-menu #open {
+  font-size: 45px;
+  line-height: 64px;
+  cursor: pointer;
+}
+
+.sp-menu #open.hide {
+  display: none;
+
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  text-align: center;
+  padding: 35px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.8s;
+  z-index: 2;
+}
+
+.overlay.show {
+  opacity: 0.8;
+  pointer-events: auto;
+  background-color: black;
+  width: 200px;
+  height: 370px;
+}
+
+.overlay #close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 40px;
+  cursor: pointer;
+  
+}
+
+
+.overlay li {
+  margin-top: 24px;
+  opacity: 0;
+  transform :translateX(50px);
+  transition: opacity .3s, transform .3s;
+}
+
+.overlay.show li {
+  opacity: 1;
+  transform: none;
+}
+.overlay a:hover {
+  color: #9A0000;
+}
+
+.overlay.show li:nth-child(1) {
+  transition-delay:  .1s;
+}
+.overlay.show li:nth-child(2) {
+  transition-delay:  .2s;
+}
+.overlay.show li:nth-child(3) {
+  transition-delay:  .3s;
+}
+.overlay.show li:nth-child(4) {
+  transition-delay:  .4s;
+}
+
+.navi-menu {
+  display: none;
+}
+
+
+/* ---------------------------------------------------------------------------レスポンシブ------------------------------------------- */
+
+@media screen and (min-width: 561px) {
+  .navi-menu {
+    display: block;
+    display: flex;
+  }
+  .navi-menu li {
+    margin-bottom: 20px;
+  }
+  .sp-menu {
+    display: none;
+  } 
+}  
+
+@media screen and (max-width:561px) {
+#loading img {
+  display: block;
+  margin:280px auto 20px;
+}
+  header img {
+  width: 100%;
+  max-width: 150px;
+  min-width: 100px;
+  height:auto;
+}
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  font-weight:normal;
+  font-size: 1.7rem;
+} 
+
+
+/* -------------------------------------------------------------section1-------------------------------------------------------- */
+.section1 {
+  padding: 6% 7% 0 7%;
+}
+.section1 p{
+  text-align: left;
+  line-height: 30px;
+  font-size: 0.9rem;
+ 
+}
+.section1 img {
+  max-width: 150px;
+  height: 180px;
+  position: static;
+  margin-top: 20px;
+} 
+.section1 br {
+  display: none;
+}
+/* -------------------------------------------------------------------section2--------------------------------------------------------- */
+.section2 {
+padding: 9%;
+flex-direction: column;
+}
+.pizza-img {
+  width: 330px;
+  height: 200px;
+  margin-top: 0px;
+  position: relative;
+ 
+}
+.tapas-img {
+width: 160px;
+height: 120px;
+position: absolute;;
+top:-130px;
+left: 180px;
+}
+
+.txt-box {
+  text-align: center;
+  border :1px solid #ffffff;
+  height: 430px;
+  width: 330px;
+  padding: 30px 0 30px 0;
+  margin-top: 50px;
+}
+.boxtxt-l {
+  font-size: 2.4rem;
+  letter-spacing: 10px;
+}
+.boxtxt-m {
+  line-height: 30px;
+  margin-bottom: 40px;
+  
+}
+.boxtxt-s1 {
+  font-size: 0.9rem;
+  margin-bottom: 20px;  
+ position: relative;
+}
+.boxtxt-s2 {
+  font-size: 0.9rem;
+  margin-bottom: 20px;  
+} 
+ .boxtxt-s1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; 
+  display: inline-block;
+  width: 70px; 
+  height: 1px; 
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); 
+  background-color:#fff; 
+}
+.link-btn {
+  border: 1px solid #fff;
+  padding: 7px 12px;
+}
+.link-btn:hover {
+  background-color: #fff;
+  color: black;
+}
+/* ---------------------------------------------------------section3------------------------------------------------------ */
+.picture {
+  text-align: center;
+  margin-top: 50px;
+  position: static;
+}
+.course-img {
+  width: 330px;
+  height: 200px;
+  border-radius: 5px;
+
+}
+.food-img {
+  width: 330px;
+  height: 200px;
+  position: static;
+   border-radius: 5px;
+}
+.human-img {
+  width: 330px;
+  height: 200px;
+  position: static;
+  
+   border-radius: 5px;
+}
+/* ---------------------------------------------------------------------section4--------------------------------------------------- */
+.section4 {
+  background-position: center;
+  height: 600px;
+  margin-top: 50px;
+padding-top: 50px;
+}
+.txt-box2 {
+  margin:0 auto;
+  
+}
+.newsbox {
+  margin-bottom: 20px;
+}
+.boxtxt-l2 {
+  letter-spacing: 3px;
+  font-size: 2.4rem;
+}
+
+
+/* --------------------------------------------------------------------section5---------------------------------------------------- */
+.section5 {
+text-align: center;
+}
+.section5 p,.section5 h2 {
+  padding: 0 30px 0;
+}
+.section5-imgs {
+  height: 350px;
+}
+
+
+
+/* ----------------------------------------------------------------section6----------------------------------------------------------- */
+.section6 {
+  background-color: #120F0F;
+  text-align: center;
+  padding:50px;
+}
+.section-txt6 {
+  font-size: 2.6rem;
+  letter-spacing: 5px;
+}
+.newsbox {
+  width: 100%;
+  border-top:3px solid #fff;
+  border-bottom:3px solid #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+
+}
+.news-wrapper {
+  display: flex;
+flex-direction: column;
+}
+.news-txt6 {
+  margin-bottom: 20px;
+}
+.news-txt6s {
+  text-align: left;
+  font-size: 0.8rem;
+}
+.br-hide {
+  display: none;
+}
+.br-show {
+  display: block;
+}
+/* -------------------------------------------------------------------section7------------------------------------- */
+.section7 {
+  display: flex;
+  margin: 0 auto;
+  width:300px;
+  padding-top: 50px;
+  flex-direction: column;
+  
+  
+}
+.section7 img {
+  width: 100%;
+  height: 400px;
+}
+.infomation-box {
+  background-color: #9A0000;
+  text-align: center;
+  padding: 50px 20px;
+  border:1px solid #fff ;
+}
+h3 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.section7-txt {
+  font-size: 0.9rem;
+  margin-bottom: 20px;  
+ position: relative;
+} 
+
+ .section7-txt::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; 
+  display: inline-block;
+  width: 100px; 
+  height: 1px; 
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); 
+  background-color:#fff; 
+}
+
+.section7-txtL1 {
+
+  margin-top: 50px; 
+}
+/* -------------------------------------------------------section8---------------------------------------------- */
+.section8 p {
+  font-size: 1rem;
+}
+.section8 {
+  width: 300px;
+  margin: 0 auto;
+  
+}
+.iframe {
+  width: 100%;
+  max-width: 300px;
+  height: 400px;
+}
+.gmap {
+  padding: 0;
+
+}
+ 
+
+  
+
+/* -----------------------------------------------------------footer--------------------------------------------------- */
+.footwrapper img {
+  width: 50%;
+  height: 50%;
+
+} 
+
+}
+/* -------------------------------------------------------------レスポンシブ　タブレット &iphone5--------------------------------- */
+@media screen and (max-width:320px) {
+  .txt-box {
+    width: 280px;
+  }
+  .txt-box2 {
+    width: 280px;
+  }
+  .tapas-img {
+width: 140px;
+height: 120px;
+position: absolute;;
+top:-80px;
+left: 160px;
+}
+.section7 {
+  width: 280px;
+}
+#loading img {
+  display: block;
+  margin:180px auto 20px;
+}
+h1 {
+  font-size: 1.2rem;
+}
+ 
+} 
+@media screen and (min-width:563px) and (max-width:812px) {
+body{
+  font-size: 14px;
+}
+#loading img {
+  display: block;
+  margin:400px auto 20px;
+}
+.navi-menu li {
+  font-size: 0.9rem;
+  margin-right: 8px;
+}
+  .section1 p {
+  text-align: left;
+  line-height: 30px;
+  font-size: 0.8rem;
+  margin-left: 10px;
+}
+header img {
+  width: 100%;
+  max-width: 250px;
+  min-width: 100px;
+  height:136px;
+}
+
+
+.section1 img {
+  max-width: 160px;
+  height: 210px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+}
+h1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+/* ---------------------------------------------------------------section２------------------------------------------------------ */
+.section2 {
+padding: 2%;
+position: relative;
+display: flex;
+justify-content: space-around;
+align-items: center;
+}
+
+
+.pizza-img {
+  margin-top: 150px;
+  max-width: 400px;
+  height: 300px;
+  position: relative;
+  width: 100%;
+  
+}
+.tapas-img {
+max-width: 200px;
+position: absolute;
+top: 90px;
+left:200px;
+}
+
+.txt-box {
+  text-align: center;
+  border :1px solid #ffffff;
+  height: 340px;
+  width: 260px;
+  padding: 20px 0 30px 0;
+  margin-top: 160px;
+}
+
+.boxtxt-m {
+  margin-bottom: 15px;
+  line-height: 25px;
+}
+
+.boxtxt-s1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; 
+  display: inline-block;
+  width: 70px; 
+  height: 1px; 
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); 
+  background-color:#fff; 
+}
+.link-btn {
+  border: 1px solid #fff;
+  padding: 7px 12px;
+}
+.link-btn:hover {
+  background-color: #fff;
+  color: black;
+}
+/* -----------------------------------------------------section3----------------------------------------------------- */
+.picture {
+  text-align: center;
+  margin-top: 200px;
+  position: relative;
+}
+.course-img {
+  width: 800px;
+  max-height: 600px;
+  
+
+}
+.food-img {
+  width: 250px;
+  height: 200px;
+  position: absolute;
+  top: -80px;
+  left: 30px;
+  z-index: 1000;
+}
+.human-img {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  top: -140px;
+  right: 50px;
+}
+.txt-box2 {
+  text-align: center;
+  border :1px solid #ffffff;
+  height: 360px;
+  width: 260px;
+  padding: 10px 0 10px 0;
+  margin-left: 100px;
+}
+
+.news-wrapper {
+  flex-direction: column;
+  
+}
+.newsbox {
+  width: 80%;
+  margin: 20px auto;
+}
+.news-txt6s {
+  line-height: 1.3rem;
+}
+.section7 {
+  display: flex;
+  margin: 0 auto;
+  width: 650px;
+  padding-top: 50px;
+  
+}
+.section7 img {
+  width: 380px;
+  height: 600px;
+}
+.infomation-box {
+  background-color: #9A0000;
+  text-align: center;
+  padding: 80px 40px;
+  border:1px solid #fff ;
+}
+}
+/* --------------------------------------------------------section4------------------------------------------------------ */
+
+ @media screen and (min-width:813px) and (max-width:1024px) {
+
+.navi-menu li {
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+  .section1 p {
+  text-align: left;
+  line-height: 30px;
+  font-size: 1rem;
+  margin-left: 20px;
+}
+
+
+.section1 img {
+  max-width: 180px;
+  height: 240px;
+  position: absolute;
+  top: 0;
+  right: 20px;
+} 
+/* ---------------------------------------------------------------section２------------------------------------------------------ */
+.section2 {
+/* padding: 2%; */
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+
+.pizza-img {
+  margin-top: 150px;
+  max-width: 600px;
+  height: 400px;
+  position: relative;
+  width: 100%;
+  
+}
+.tapas-img {
+max-width: 250px;
+position: absolute;
+top: 60px;
+left:250px;
+}
+
+.txt-box {
+  text-align: center;
+  border :1px solid #ffffff;
+  height: 380px;
+  width: 320px;
+  padding: 30px 10px 30px 10px;
+  margin-top: 160px;
+}
+.boxtxt-l {
+  font-size: 2.4rem;
+  letter-spacing: 10px;
+}
+.boxtxt-m {
+  line-height: 30px;
+  margin-bottom: 40px;
+  
+}
+.boxtxt-s1 {
+  font-size: 0.8rem;
+  margin-bottom: 20px;  
+ position: relative;
+}
+.boxtxt-s2 {
+  font-size: 0.8rem;
+  margin-bottom: 20px;  
+} 
+ .boxtxt-s1::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -10px; 
+  display: inline-block;
+  width: 70px; 
+  height: 1px; 
+  -moz-transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translate(-50%); 
+  background-color:#fff; 
+}
+.link-btn {
+  border: 1px solid #fff;
+  padding: 7px 12px;
+}
+.link-btn:hover {
+  background-color: #fff;
+  color: black;
+}
+/* -----------------------------------------------------section3----------------------------------------------------- */
+.picture {
+  text-align: center;
+  margin-top: 200px;
+  position: relative;
+}
+.course-img {
+  width: 800px;
+  max-height: 600px;
+
+}
+.food-img {
+  width: 250px;
+  height: 200px;
+  position: absolute;
+  top: -80px;
+  left: 30px;
+  z-index: 1000;
+}
+.human-img {
+  width: 300px;
+  height: 200px;
+  position: absolute;
+  top: -140px;
+  right: 50px;
+}
+ 
+/* ---------------------------------------------------section6----------------------------------- */
+
+
+ }
+
+ @media screen and (min-width:1024px) and (max-width:1366px) {
+   #loading img {
+  display: block;
+  margin:300px auto 20px;
+}
+.navi-menu li {
+  font-size: 1.2rem;
+}
+ }
+ /* ----------------------------------------ページナビ------------------------- */
+
