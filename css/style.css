@@ -641,7 +641,7 @@ footer {
 @media screen and (max-width:561px) {
 #loading img {
   display: block;
-  margin:280px auto 20px;
+  margin:180px auto 20px;
 }
   header img {
   width: 100%;
