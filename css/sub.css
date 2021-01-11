@@ -545,9 +545,9 @@ html {
   header img {
   margin-top: 10px;
     width: 100%;
-  max-width: 150px;
+  max-width: 130px;
   min-width: 100px;
-  height:auto;
+  height:70px;
 }
 .menu-list {
   text-align: left;
