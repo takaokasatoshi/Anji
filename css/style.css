@@ -644,6 +644,7 @@ footer {
   margin:180px auto 20px;
 }
   header img {
+  margin-top: 10px;
   /* width: 100%; */
   max-width: 130px;
   min-width: 100px;
