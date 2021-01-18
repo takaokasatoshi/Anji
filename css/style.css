@@ -15,7 +15,8 @@ body {
 
 font-family: 'Cinzel','Noto Serif JP',serif;
 background-color:  #1a0404;
-
+max-width: 1480px;
+margin: 0 auto;
 }
 a {
   text-decoration: none;
